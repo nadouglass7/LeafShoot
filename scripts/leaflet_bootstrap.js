@@ -5,9 +5,7 @@
 var map;
 var lat = 44.475464;
 var lng = -121.944875;
-var zoom = 9;
-var geojson;
-var lastClickedLayer;
+var zoom = 8;
 
 var OpenStreetMap_BaW = L.tileLayer("http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png", {
     minZoom: 9,
@@ -27,7 +25,7 @@ var OpenStreetMap = L.tileLayer("https://b.tile.openstreetmap.org/{z}/{x}/{y}.pn
 });
 
 var Carto = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png", {
-    minZoom: 10,
+    minZoom: 9,
     attribution: "<a href=\"https://carto.com/legal\">CARTO</a><a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a>"
 });
 
@@ -42,10 +40,11 @@ function initmap() {
     map = new L.Map("map");
 
     map.setView(new L.LatLng(lat, lng), zoom);
+    map.addLayer(Carto);
     // map.addLayer(Stamen_Terrain);
     // map.addLayer(OpenStreetMap);
-    map.addLayer(Carto);
     // map.addLayer(OpenTopo);
+
 }
 
 initmap();
