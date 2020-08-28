@@ -16,14 +16,49 @@ var cities = L.layerGroup([littleton, denver, aurora, golden]).addTo(map);
 // L.geoJson(data).addTo(map);
 // });
 
-var extent = L.geoJson(null);
+// var extent = L.geoJson(null);
 
-$.getJSON("data/557SX_524SX_Extent.geojson", function (data) {
-  extent.addData(data);
-});
+// $.getJSON("https://github.com/nadouglass7/LeafShoot/blob/master/data/557SX_524SX_Extent.geojson", function (data) {
+//   extent.addData(data);
+// });
+//
+// extent.addTo(map);
 
-extent.addTo(map);
-
-// var geojsonLayer = new L.GeoJSON.AJAX("../data/557SX_524SX_Extent.geojson");
+// var geojsonLayer = new L.GeoJSON.AJAX("https://github.com/nadouglass7/LeafShoot/blob/master/data/557SX_524SX_Extent.geojson");
 //
 // geojsonLayer.addTo(mymap);
+
+// map.on("load", function() {
+//
+// 	// Add the source data to the map
+//     map.addSource("Extent", {
+//         type: "geojson",
+//         data: "https://github.com/nadouglass7/LeafShoot/blob/master/data/557SX_524SX_Extent.geojson"
+//
+//     });
+//     // Add the route-2000 to the map with styles
+//     map.addLayer({
+//         "id": "Extent",
+//         "type": "polygon",
+//         "source": "Extent",
+//         "paint": {
+//             "line-color": "#991bc6",
+//             "line-width": 2
+//         },
+//         "layout": {
+//             "line-join": "round",
+//             "line-cap": "round"
+//         },
+//     });
+// });
+
+var url = 'data/557SX_524SX_Extent.geojson';
+// Null variable that will hold layer
+
+var extentLayer = L.geoJson(null);
+
+	$.getJSON(url, function(data) {
+        stateLayer.addData(data);
+    });
+
+ extentLayer.addTo(map);
