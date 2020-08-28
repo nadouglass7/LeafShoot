@@ -58,7 +58,7 @@ var url = 'data/557SX_524SX_Extent.geojson';
 var extentLayer = L.geoJson(null);
 
 	$.getJSON(url, function(data) {
-        stateLayer.addData(data);
+        extentLayer.addData(data);
     });
 
  extentLayer.addTo(map);
