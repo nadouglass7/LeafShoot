@@ -13,7 +13,8 @@ function style(feature) {
     return {
         weight: 2,
         opacity: 1,
-        color: '#ff0000'
+        color: '#ff0000',
+        fillOpacity: .0
     };
 }
 
