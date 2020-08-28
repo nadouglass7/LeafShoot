@@ -30,7 +30,24 @@ var extentLayer = L.geoJson(null, {style: style});
 // add trail data
 //-----------------
 
+var url2 = 'data/OSM_Trails.geojson';
 
+// Set style for bbox
+function trail_style(feature) {
+    return {
+        weight: 2,
+        opacity: 1,
+        color: '#ff0000'
+    };
+}
+
+var trailLayer = L.geoJson(null, {style: trail_style});
+
+	$.getJSON(url2, function(data) {
+        trailLayer.addData(data);
+    });
+
+ trailLayer.addTo(map);
 
 
  // Example for layer groups
