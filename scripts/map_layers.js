@@ -108,8 +108,6 @@ new L.GPX(gpx, {
         'Park': null
     }
   }
-}).on('loaded', function(e) {
-map.fitBounds(e.target.getBounds());
 }).addTo(map);
 
 // new L.GPX(gpx, {async: true}).on('loaded', function(e) {
