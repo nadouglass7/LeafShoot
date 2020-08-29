@@ -85,6 +85,11 @@ completedTrailLayer.addTo(map);
 //-----------------
 
 var gpx = 'data/gpx/Cougar res.gpx'; // URL to your GPX file or the GPX itself
+var dir = 'data/gpx/'
+
+for (var k in dir) {
+  console.log(k, dir[k]);
+}
 
 new L.GPX(gpx, {
   async: true,
