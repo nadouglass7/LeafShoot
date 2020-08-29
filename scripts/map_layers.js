@@ -85,25 +85,25 @@ completedTrailLayer.addTo(map);
 //-----------------
 
 // Set style for bbox
-function completed_trail_style(feature) {
-    return {
-        weight: 2.5,
-        opacity: 1,
-        pane: 'completedTrails',
-        color: '#009900'
-    };
-}
-
-var completedTrailLayer = L.geoJson(null, {style: completed_trail_style});
-
-var gpx = 'data/Cougar res.gpx'; // URL to your GPX file or the GPX itself
-
-// var gpxTrailLayer = L.geoJson(null, {style: completed_trail_style});
-// var gpxTrailLayer = L.geoJson(null, {style: completed_trail_style});
-
-new L.GPX(gpx, {async: true}).on('loaded', function(e) {
-map.fitBounds(e.target.getBounds());
-}).addTo(map);
+// function completed_trail_style(feature) {
+//     return {
+//         weight: 2.5,
+//         opacity: 1,
+//         pane: 'completedTrails',
+//         color: '#009900'
+//     };
+// }
+//
+// var completedTrailLayer = L.geoJson(null, {style: completed_trail_style});
+//
+// var gpx = 'data/Cougar res.gpx'; // URL to your GPX file or the GPX itself
+//
+// // var gpxTrailLayer = L.geoJson(null, {style: completed_trail_style});
+// // var gpxTrailLayer = L.geoJson(null, {style: completed_trail_style});
+//
+// new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+// map.fitBounds(e.target.getBounds());
+// }).addTo(map);
 
 
  // Example for layer groups
