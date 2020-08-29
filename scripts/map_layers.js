@@ -119,9 +119,6 @@ new L.GPX(gpx, {
         'Park': 'assets/img/tree.png'
     }
   }
-}
-
-
 }).on('loaded', function(e) {
 map.fitBounds(e.target.getBounds());
 }).addTo(map);
