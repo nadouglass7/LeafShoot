@@ -27,7 +27,7 @@ var extentLayer = L.geoJson(null, {style: style});
  extentLayer.addTo(map);
 
 //-----------------
-// add trail data
+// add OSM trail data
 //-----------------
 
 var url2 = 'data/OSM_Trails.geojson';
@@ -49,6 +49,28 @@ var trailLayer = L.geoJson(null, {style: trail_style});
 
  trailLayer.addTo(map);
 
+ //-----------------
+ // add completed trail data
+ //-----------------
+
+ var url3 = 'data/Completed_Trails.geojson';
+
+ // Set style for bbox
+ function completed_trail_style(feature) {
+     return {
+         weight: 2.3,
+         opacity: 1,
+         color: '#009900'
+     };
+ }
+
+ var completedTrailLayer = L.geoJson(null, {style: completed_trail_style});
+
+ 	$.getJSON(url3, function(data) {
+         completedTrailLayer.addData(data);
+     });
+
+  completedTrailLayer.addTo(map);
 
  // Example for layer groups
  // var littleton = L.marker([44.475464, -121.944875]).bindPopup('This is Littleton, CO.'),
