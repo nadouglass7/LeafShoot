@@ -87,23 +87,23 @@ completedTrailLayer.addTo(map);
 var gpx = 'data/gpx/Cougar res.gpx'; // URL to your GPX file or the GPX itself
 var dir = 'data/gpx/'
 
-for (var k in dir) {
-  console.log(k, dir[k]);
-}
-
-// Import the filesystem module
-const fs = require("fs");
-
-let directory_name = "data/gpx/";
-
-// Function to get current filenames
-// in directory 
-let filenames = fs.readdirSync(directory_name);
-
-console.log("\nFilenames in directory:");
-filenames.forEach((file) => {
-    console.log("File:", file);
-});
+// for (var k in dir) {
+//   console.log(k, dir[k]);
+// }
+//
+// // Import the filesystem module
+// const fs = require("fs");
+//
+// let directory_name = "data/gpx/";
+//
+// // Function to get current filenames
+// // in directory
+// let filenames = fs.readdirSync(directory_name);
+//
+// console.log("\nFilenames in directory:");
+// filenames.forEach((file) => {
+//     console.log("File:", file);
+// });
 
 
 new L.GPX(gpx, {
