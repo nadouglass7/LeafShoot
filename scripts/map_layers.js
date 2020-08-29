@@ -114,7 +114,7 @@ new L.GPX(gpx, {
     endIconUrl: 'assets/img /pin-icon-end.png',
     shadowUrl: 'assets/img /pin-shadow.png',
     wptIconUrls: {
-        '': 'assets/img /gpx/default-waypoint.png',
+        '': 'assets/img/default-waypoint.png',
         'Geocache Found': 'assets/img/geocache.png',
         'Park': 'assets/img/tree.png'
     }
