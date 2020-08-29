@@ -110,13 +110,13 @@ new L.GPX(gpx, {
     lineCap: 'round'
   },
   marker_options: {
-    startIconUrl: 'assets/img/pin-icon-start.png',
-    endIconUrl: 'assets/img /pin-icon-end.png',
-    shadowUrl: 'assets/img /pin-shadow.png',
+    startIconUrl: null,
+    endIconUrl: null,
+    shadowUrl: null,
     wptIconUrls: {
-        '': 'assets/img/default-waypoint.png',
-        'Geocache Found': 'assets/img/geocache.png',
-        'Park': 'assets/img/tree.png'
+        '': null,
+        'Geocache Found': null,
+        'Park': null
     }
   }
 }).on('loaded', function(e) {
