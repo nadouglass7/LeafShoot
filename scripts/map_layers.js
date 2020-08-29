@@ -32,11 +32,15 @@ var extentLayer = L.geoJson(null, {style: style});
 
 var url2 = 'data/OSM_Trails.geojson';
 
+// create a map pane for neighborhoods
+map.createPane('osmTrails');
+
 // Set style for bbox
 function trail_style(feature) {
     return {
         weight: 1.5,
         opacity: 1,
+        pane: 'osmTrails',
         color: '#ff0000'
     };
 }
@@ -55,11 +59,15 @@ var trailLayer = L.geoJson(null, {style: trail_style});
 
  var url3 = 'data/Completed_Trails.geojson';
 
+ // create a map pane for neighborhoods
+ map.createPane('completedTrails');
+
  // Set style for bbox
  function completed_trail_style(feature) {
      return {
          weight: 2.5,
          opacity: 1,
+         pane: 'completedTrails',
          color: '#009900'
      };
  }
