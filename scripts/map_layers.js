@@ -84,10 +84,7 @@ completedTrailLayer.addTo(map);
 // add completed GPX data
 //-----------------
 
-var gpx = 'data/Cougar res.gpx'; // URL to your GPX file or the GPX itself
-
-// var gpxTrailLayer = L.geoJson(null, {style: completed_trail_style});
-// var gpxTrailLayer = L.geoJson(null, {style: completed_trail_style});
+var gpx = 'data/gpx/Cougar res.gpx'; // URL to your GPX file or the GPX itself
 
 new L.GPX(gpx, {
   async: true,
