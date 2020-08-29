@@ -35,7 +35,7 @@ var url2 = 'data/OSM_Trails.geojson';
 // create a map pane for neighborhoods
 map.createPane('osmTrails');
 
-// Set style for bbox
+// Set style for osm trails
 function trail_style(feature) {
     return {
         weight: 1.5,
@@ -62,7 +62,7 @@ var url3 = 'data/Completed_Trails.geojson';
 // create a map pane for neighborhoods
 map.createPane('completedTrails');
 
-// Set style for bbox
+// Set style for trail
 function completed_trail_style(feature) {
     return {
         weight: 2.5,
@@ -84,7 +84,7 @@ completedTrailLayer.addTo(map);
 // add completed GPX data
 //-----------------
 
-Set style for bbox
+// set style for gpx
 function completed_trail_style(feature) {
     return {
         weight: 2.5,
