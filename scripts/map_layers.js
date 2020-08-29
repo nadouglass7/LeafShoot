@@ -35,7 +35,7 @@ var url2 = 'data/OSM_Trails.geojson';
 // Set style for bbox
 function trail_style(feature) {
     return {
-        weight: 2,
+        weight: 1.5,
         opacity: 1,
         color: '#ff0000'
     };
@@ -58,7 +58,7 @@ var trailLayer = L.geoJson(null, {style: trail_style});
  // Set style for bbox
  function completed_trail_style(feature) {
      return {
-         weight: 2.3,
+         weight: 2.5,
          opacity: 1,
          color: '#009900'
      };
