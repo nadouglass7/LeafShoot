@@ -103,11 +103,11 @@ var gpx = 'data/Cougar res.gpx'; // URL to your GPX file or the GPX itself
 
 new L.GPX(gpx, {
   async: true,
-  pane: 'completedTrails',
   polyline_options: {
     color: 'green',
     opacity: 1,
     weight: 2.5,
+    pane: 'completedTrails',
     lineCap: 'round'
   },
   marker_options: {
