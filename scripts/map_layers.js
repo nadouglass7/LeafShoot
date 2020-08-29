@@ -101,7 +101,21 @@ var gpx = 'data/Cougar res.gpx'; // URL to your GPX file or the GPX itself
 // var gpxTrailLayer = L.geoJson(null, {style: completed_trail_style});
 // var gpxTrailLayer = L.geoJson(null, {style: completed_trail_style});
 
-new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+new L.GPX(gpx, {
+  async: true,
+  marker_options: {
+    startIconUrl: 'images/pin-icon-start.png',
+    endIconUrl: 'images/pin-icon-end.png',
+    shadowUrl: 'images/pin-shadow.png',
+    wptIconUrls: {
+        '': 'img/gpx/default-waypoint.png',
+        'Geocache Found': 'img/gpx/geocache.png',
+        'Park': 'img/gpx/tree.png'
+    }
+  }
+
+
+}).on('loaded', function(e) {
 map.fitBounds(e.target.getBounds());
 }).addTo(map);
 
