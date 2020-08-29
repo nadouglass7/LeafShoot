@@ -104,7 +104,7 @@ var gpx = 'data/Cougar res.gpx'; // URL to your GPX file or the GPX itself
 new L.GPX(gpx, {
   async: true,
   polyline_options: {
-    color: '009900',
+    color: 'green',
     opacity: 1,
     weight: 2.5,
     lineCap: 'round'
@@ -119,6 +119,7 @@ new L.GPX(gpx, {
         'Park': 'assets/img/tree.png'
     }
   }
+}
 
 
 }).on('loaded', function(e) {
